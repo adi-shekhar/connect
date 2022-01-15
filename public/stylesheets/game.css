@@ -1,0 +1,78 @@
+/* body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+} */
+
+/* a {
+  color: #00B7FF;
+} */
+
+
+/*did not make the other stuff*/
+body {
+  /* background-color: #1F305E; */
+  background-image: url("../images/gamebg.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-size: contain; */
+  /* background-size:9%; */
+}
+#board {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+th, td {
+  /* border:1px solid black;
+  border-radius: 5px; */
+  background-color: white;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 10px 10px;
+}
+
+tr {
+  /* width: 100%; */
+  height: 70px;
+}
+td {
+  text-align: center;
+  width: 70px;
+  /* padding: 10px; */
+}
+
+td:hover {
+  background-color: dodgerblue;
+}
+
+#left {
+  text-align: center;
+  position: absolute;
+  width: 15%;
+  left: 0;
+  padding: 20px;
+  top: 30%;
+  color: #BCD2E1;
+  font-size: 130%;
+}
+
+#right {
+  position: absolute;
+  width: 15%;
+  right: 0;
+  height: 100%;
+  background-image: url("../images/bg5.webp");
+  background-repeat: repeat-y;
+  background-size: contain;
+}
+
+#gameOver {
+  padding-top: 15px;
+  text-align: center;
+  top: 0;
+  color: #BCD2E1;
+  font-style: italic;
+}

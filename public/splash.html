@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <link rel="stylesheet" href="stylesheets/style.css" />
+      <link rel="stylesheet" href="stylesheets/splash.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet">
+    </head>
+
+
+
+    <body>
+      <div id="header">
+        <h1>CONNECT FOUR</h1>
+        <div id="aBunchOfSquares">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+      </div>
+
+      <div id="fourLogo">
+        <svg height="300" width="250">
+          <circle cx="150" cy="30" r="15" fill="#FAD19D" class="circle"/>
+          <circle cx="150" cy="75" r="15" fill="#FAD19D" class="circle"/>
+          <circle cx="150" cy="120" r="15" fill="#FAD19D" class="circle"/>
+          <circle cx="150" cy="165" r="15" fill="#FAD19D" class="circle"/>
+          <circle cx="150" cy="210" r="15" fill="#FAD19D" class="circle"/>
+
+          <circle cx="120" cy="50" r="15" fill="#FAD19D" class="circle"/>
+          <circle cx="90" cy="80" r="15" fill="#FAD19D" class="circle"/>
+          <circle cx="60" cy="120" r="15" fill="#FAD19D" class="circle"/>
+
+          <circle cx="110" cy="120" r="15" fill="#FAD19D" class="circle"/>
+          <circle cx="190" cy="120" r="15" fill="#FAD19D" class="circle"/>
+        </svg>
+      </div>
+
+      <div id="content">
+        <form action="/play" method="get">
+              <button type="submit" id="playButton">PLAY</button>
+        </form>
+
+        <div id="stats">
+          <p>CURRENT ACTIVE GAMES:</p>
+          <p>TOTAL GAMES PLAYED:</p>
+          <p>ACTIVE PLAYERS:</p>
+        </div>
+
+        <div id="fNaslov">
+          <p>HOW TO PLAY?</p>
+        </div>
+      </div>
+      <div id="footer">
+          <p>place pieces in empty rows until you get 4 in a row  <br>
+            ~horizontal/vertical/diagonal~
+          </p>
+      </div>
+
+      <script src="javascripts/splash.js"></script>
+    </body>
+  </html>
