@@ -13,18 +13,18 @@
     <body>
       <div id="header">
         <h1>CONNECT FOUR</h1>
-          <div id="aBunchOfSquares">
-            <div class="grid-container">
-              <div class="item1"><div class="square"></div></div>
-              <div class="item2"><div class="square"></div></div>
-              <div class="item3"><div class="square"></div></div>
-              <div class="item3"><div class="square"></div></div> 
-            </div>
-            <!-- <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div> -->
+        <div id="aBunchOfSquares">
+          <div class="grid-container">
+            <div class="item1"><div class="square"></div></div>
+            <div class="item2"><div class="square"></div></div>
+            <div class="item3"><div class="square"></div></div>
+            <div class="item3"><div class="square"></div></div>
           </div>
+          <!-- <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div> -->
+        </div>
       </div>
 
       <div id="fourLogo">
@@ -50,9 +50,9 @@
         </form>
 
         <div id="stats">
-          <p>CURRENT ACTIVE GAMES:</p>
-          <p>TOTAL GAMES PLAYED:</p>
-          <p>ACTIVE PLAYERS:</p>
+          <p>CURRENT ACTIVE GAMES: <span id="currentActiveGames" class="statsNrs"><%= currentActiveGames %></span></p>
+          <p>TOTAL GAMES PLAYED:  <span id="totalGames" class="statsNrs"><%= gamesCompleted %></span></p>
+          <p>ACTIVE PLAYERS: <span id="activeGames" class="statsNrs"><%= numberOfPlayers %></span></p>
         </div>
 
         <div id="fNaslov">
