@@ -127,20 +127,7 @@ h1:active {
 .wow-your-screen-is-small
 {
     display: hidden;
-}
-
-@media screen and ( min-width: 350px) and ( max-height: 750px) {
-  .balloon {
-    display: none;
-  }
-  button {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-  }
-} 
-  1 
+}  1 
 
 @keyframes shake {
   0% { transform: translate(0px, 0.5px) ; }
