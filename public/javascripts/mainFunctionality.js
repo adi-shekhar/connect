@@ -64,7 +64,9 @@ function setGamePiece(playerType) {
 function addColumn(c) {
   var cell = 0;
 
-  if(gameState.playerTurn) {
+  console.log(gameState.gameOver);
+
+  if(gameState.playerTurn == true && gameState.gameOver == false) {
     var actuallyAdded = false;
     for(i = boardHeight-1; i >= 0; i--) {
       if(board[i][c] == 0) {
@@ -249,6 +251,7 @@ function beginGame(serverBoard) {
 function initialiseGameState() {
     // gameState.board = board;
     gameState.time = 0;
+    gameState.gameOver = false;
 }
 
 function setToPlayerTurn() {
@@ -268,10 +271,10 @@ function setToOpponentTurn() {
 
 function endGame(message) {
     gameState.playerTurn = false;
-    setToOpponentTurn();
     document.getElementById("gameOver").innerHTML = message;
     gameState.gameOver = true;
     console.log("game is over bb");
+    console.log(playerTurn);
 }
 
 
