@@ -16,10 +16,15 @@ if(process.argv.length < 3) {
 const port = process.argv[2];
 const app = express();
 
+app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
 app.get("/play", indexRouter);
-app.get("/", indexRouter);
+// app.get("/", indexRouter);
+app.get('/', function(req, res) {
+    //example of data to render; here gameStatus is an object holding this information
+    res.render('splash.ejs', { currentActiveGames: gameStatus.currentActiveGames, gamesCompleted: gameStatus.gamesCompleted, numberOfPlayers: gameStatus.numberOfPlayers });
+})
 
 // http.createServer(app).listen(port);
 const server = http.createServer(app);
@@ -60,6 +65,7 @@ wss.on("connection", function connection(ws) {
   con["id"] = connectionID++;
   let playerType = currentGame.addPlayer(con);
   websockets[con["id"]] = currentGame;
+  gameStatus.numberOfPlayers++;
 
   console.log(
     `Player ${con["id"]} placed in game ${currentGame.id} as ${playerType}`
@@ -84,7 +90,7 @@ wss.on("connection", function connection(ws) {
 
   if (currentGame.hasTwoConnectedPlayers()) {
     currentGame = new Game(gameStatus.gamesInitialized++);
-
+    gameStatus.currentActiveGames++;
   }
 
   con.on("message", function incoming(message) {
@@ -119,6 +125,8 @@ wss.on("connection", function connection(ws) {
     //check who won?
     if (oMsg.type == "GAME-OVER") {
       console.log("Game is over :(");
+      // gameStatus.gamesInitialized--;
+      gameStatus.currentActiveGames--;
       if(oMsg.data == 1) {
         gameObj.playerA.send(messages.S_GAME_WON);
         gameObj.playerB.send(messages.S_GAME_LOST);
@@ -145,6 +153,7 @@ wss.on("connection", function connection(ws) {
      * source: https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent
      */
     console.log(`${con["id"]} disconnected ...`);
+    gameStatus.numberOfPlayers--;
 
     if (code == "1001") {
       /*
