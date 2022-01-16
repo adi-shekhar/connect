@@ -95,6 +95,12 @@ h1:active {
 #stats::after {
   content: '\2026';
 }
+
+.statsNrs {
+  color: #865D29;
+  font-weight: normal;
+}
+
 #footer {
   padding: 10px;
   background-color: #1F305E;
