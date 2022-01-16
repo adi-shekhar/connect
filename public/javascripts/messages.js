@@ -52,10 +52,6 @@
       data: null
     };
 
-
-    /*
-    *    Player B will send to message about the selected card to the server and the server can send that message to player A in turn
-    */
     exports.T_SET_B = "PLAYER-TURN-B";
     exports.O_SET_B = {
       type: exports.T_SET_B,
