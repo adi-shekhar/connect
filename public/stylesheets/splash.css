@@ -123,6 +123,20 @@ h1:active {
   top: 0;
   margin-top: 2%;
 }
+
+.wow-your-screen-is-small
+{
+    display: hidden;
+}
+
+@media (max-width: 900px)
+{
+    .wow-your-screen-is-small
+    {
+        display: block;
+    }
+}
+
 @keyframes shake {
   0% { transform: translate(0px, 0.5px) ; }
   20% { transform: translate(0px, -1px); }
