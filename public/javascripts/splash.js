@@ -3,9 +3,9 @@ let i = 0;
 let colors = ["#ff8c1a", "#80bfff", "#f11334", "#ffff66", "#99ccff", "#0505ad", "#e9afe9"];
 let squares = document.getElementsByClassName("square");
 
-for(j = 0; j < squares.length; j ++) {
-  squares[j].style.marginLeft = (j * 150).toString() + "px";
-}
+// for(j = 0; j < squares.length; j ++) {
+//   squares[j].style.marginLeft = (j * 150).toString() + "px";
+// }
 
 setInterval(function changeColor () {
     if(i>=7) {i = 0};
