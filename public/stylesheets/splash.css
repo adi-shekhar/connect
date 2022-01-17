@@ -127,7 +127,15 @@ h1:active {
 .wow-your-screen-is-small
 {
     display: hidden;
-}  1 
+}
+
+@media (max-width: 900px)
+{
+    .wow-your-screen-is-small
+    {
+        display: block;
+    }
+}
 
 @keyframes shake {
   0% { transform: translate(0px, 0.5px) ; }
