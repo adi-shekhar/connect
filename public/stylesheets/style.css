@@ -8,7 +8,7 @@ body {
   background-color: #1F305E;
 }
 
-@media (max-width: 699px), (max-height: 699px) {
+@media (max-width: 799px), (max-height: 799px) {
   body::before {
     position: absolute;
     top: 0;
@@ -19,7 +19,7 @@ body {
     font-size: 20px;
     color: #1F305E;
     padding: 20px;
-    content: "Your window is too small (at least 600x600px is expected) to play this game. Enlarge the browser window or zoom out to play or disable the CSS @media query.";
+    content: "Your window is too small (at least 800x800px is expected) to play this game. Enlarge the browser window or zoom out to play or disable the CSS @media query.";
     background-image: url("../images/gif2.gif");
     /* text-align: center; */
     z-index: 100;
