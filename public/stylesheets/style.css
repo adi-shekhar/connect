@@ -8,7 +8,7 @@ body {
   background-color: #1F305E;
 }
 
-@media (max-width: 599px), (max-height: 599px) {
+@media (max-width: 699px), (max-height: 699px) {
   body::before {
     position: absolute;
     top: 0;
