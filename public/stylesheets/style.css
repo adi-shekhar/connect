@@ -3,25 +3,25 @@
   margin: 0;
 }
 
-/**body {
+body {
   font-family: 'Coda', cursive;
   background-color: #1F305E;
-}*/
+}
 
-/**@media (max-width: 699px), (max-height: 699px) {
+@media (max-width: 699px), (max-height: 699px) {
   body::before {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;*/
+    height: 100vh;
     /* font-family: 'Courier New', Courier, monospace; */
-    /**font-size: 20px;
+    font-size: 20px;
     color: #1F305E;
     padding: 20px;
     content: "Your window is too small (at least 700x700px is expected) to play this game. Enlarge the browser window or zoom out to play or disable the CSS @media query.";
-    background-image: url("../images/gif2.gif");*/
+    background-image: url("../images/gif2.gif");
     /* text-align: center; */
-    /*z-index: 100; */
+    z-index: 100;
   }
 }
